@@ -27,11 +27,10 @@ def main():
                     \nСсылка на урок: {last_response["lesson_url"]}
                     ''', chat_id=os.environ["chat_id"])
                 else:
-                    bot.send_message(text=f'''
-                    У вас проверили работу
-                    "{last_response["lesson_title"]}"\n\n
-                    Преподавателю все понравилось!
-                    Можно приступать к следующему уроку.''', chat_id=os.environ["chat_id"])
+                    bot.send_message(text=f'''У вас проверили работу "{last_response["lesson_title"]}"
+                    \nПреподавателю все понравилось!
+                    \nМожно приступать к следующему уроку.
+                    ''', chat_id=os.environ["chat_id"])
             if attempts["status"] == 'timeout':
                 timestamp = response["timestamp_to_request"]
 
