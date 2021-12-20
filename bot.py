@@ -22,11 +22,9 @@ def main():
                 last_response = attempts['new_attempts'][0]
                 timestamp = attempts["last_attempt_timestamp"]
                 if last_response["is_negative"]:
-                    bot.send_message(text=f'''
-                    У вас проверили работу
-                    "{last_response["lesson_title"]}"\n\n
-                    К сожалению в работе нашли ошибки.\n
-                    Ссылка на урок: {last_response["lesson_url"]}
+                    bot.send_message(text=f''' У вас проверили работу "{last_response["lesson_title"]}"
+                    \nК сожалению в работе нашли ошибки.
+                    \nСсылка на урок: {last_response["lesson_url"]}
                     ''', chat_id=os.environ["chat_id"])
                 else:
                     bot.send_message(text=f'''
