@@ -2,12 +2,14 @@ import requests
 import os
 import telegram
 import time
+from dotenv import load_dotenv
 
 
 def main():
+    load_dotenv()
     bot = telegram.Bot(token=os.environ.get("telegram_token"))
     headers = {
-                'Authorization': f'Token {os.environ.get["token"]}'
+                'Authorization': f'Token {os.environ.get("token")}'
     }
     timestamp = ""
     while True:
