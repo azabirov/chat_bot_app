@@ -1,3 +1,5 @@
+import logging
+
 import requests
 import os
 import telegram
@@ -6,6 +8,7 @@ from dotenv import load_dotenv
 
 
 def main():
+    logging.warning('Бот запущен')
     load_dotenv()
     bot = telegram.Bot(token=os.environ.get("telegram_token"))
     headers = {
