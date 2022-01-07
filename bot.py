@@ -58,7 +58,7 @@ def main():
         except Exception as e:
             logger.error("В работе бота возникла ошибка:")
             logger.exception(e)
-            break
+
 
 
 if __name__ == "__main__":
